@@ -8,10 +8,11 @@ const departments = [
   { id: 'mse', name: 'MSE' },
   { id: 'tef', name: 'TEF' },
   { id: 'qmm', name: 'QMM' },
-  { id: 'pse', name: 'PSE' },
+  { id: 'qmml', name: 'QMM-L' },
   { id: 'ctg', name: 'CTG' },
   { id: 'hrl', name: 'HRL' },
   { id: 'log', name: 'LOG' },
+  { id: 'fcm', name: 'FCM' },
 ];
 
 const projects = {
@@ -20,10 +21,11 @@ const projects = {
   mse: ['Project 1', 'Project 2', 'Project 3', 'Project 4', 'Project 5', 'Project 6', 'Project 7', 'Project 8', 'Project 9', 'Project 10', 'Project 11', 'Project 12', 'Project 13', 'Project 14', 'Project 15'],
   tef: ['Project 1', 'Project 2', 'Project 3', 'Project 4', 'Project 5', 'Project 6', 'Project 7', 'Project 8', 'Project 9', 'Project 10', 'Project 11', 'Project 12', 'Project 13', 'Project 14', 'Project 15'],
   qmm: ['Project 1', 'Project 2', 'Project 3', 'Project 4', 'Project 5', 'Project 6', 'Project 7', 'Project 8', 'Project 9', 'Project 10', 'Project 11', 'Project 12', 'Project 13', 'Project 14', 'Project 15'],
-  pse: ['Project 1', 'Project 2', 'Project 3', 'Project 4', 'Project 5', 'Project 6', 'Project 7', 'Project 8', 'Project 9', 'Project 10', 'Project 11', 'Project 12', 'Project 13', 'Project 14', 'Project 15'],
+  qmml: ['Project 1', 'Project 2', 'Project 3', 'Project 4', 'Project 5', 'Project 6', 'Project 7', 'Project 8', 'Project 9', 'Project 10', 'Project 11', 'Project 12', 'Project 13', 'Project 14', 'Project 15'],
   ctg: ['Project 1', 'Project 2', 'Project 3', 'Project 4', 'Project 5', 'Project 6', 'Project 7', 'Project 8', 'Project 9', 'Project 10', 'Project 11', 'Project 12', 'Project 13', 'Project 14', 'Project 15'],
   hrl: ['Project 1', 'Project 2', 'Project 3', 'Project 4', 'Project 5', 'Project 6', 'Project 7', 'Project 8', 'Project 9', 'Project 10', 'Project 11', 'Project 12', 'Project 13', 'Project 14', 'Project 15'],
   log: ['Project 1', 'Project 2', 'Project 3', 'Project 4', 'Project 5', 'Project 6', 'Project 7', 'Project 8', 'Project 9', 'Project 10', 'Project 11', 'Project 12', 'Project 13', 'Project 14', 'Project 15'],
+  fcm: ['Project 1', 'Project 2', 'Project 3', 'Project 4', 'Project 5', 'Project 6', 'Project 7', 'Project 8', 'Project 9', 'Project 10', 'Project 11', 'Project 12', 'Project 13', 'Project 14', 'Project 15'],
 };
 
 const defineProjects ={
@@ -63,16 +65,199 @@ const defineProjectLeader = {
     'Project 14': 'Project Leader N',
     'Project 15': 'Project Leader O',
 }
+
+const initialNotes = {
+  pm: {
+    'Project 1': 'Notes Project 1 PM',
+    'Project 2': 'Notes Project 2 PM',
+    'Project 3': 'Notes Project 3 PM',
+    'Project 4': 'Notes Project 4 PM',
+    'Project 5': 'Notes Project 5 PM',
+    'Project 6': 'Notes Project 6 PM',
+    'Project 7': 'Notes Project 7 PM',
+    'Project 8': 'Notes Project 8 PM',
+    'Project 9': 'Notes Project 9 PM',
+    'Project 10': 'Notes Project 10 PM',
+    'Project 11': 'Notes Project 11 PM',
+    'Project 12': 'Notes Project 12 PM',
+    'Project 13': 'Notes Project 13 PM',
+    'Project 14': 'Notes Project 14 PM',
+    'Project 15': 'Notes Project 15 PM',
+  },
+  pc: {
+    'Project 1': 'Notes Project 1 PC',
+    'Project 2': 'Notes Project 2 PC',
+    'Project 3': 'Notes Project 3 PC',
+    'Project 4': 'Notes Project 4 PC',
+    'Project 5': 'Notes Project 5 PC',
+    'Project 6': 'Notes Project 6 PC',
+    'Project 7': 'Notes Project 7 PC',
+    'Project 8': 'Notes Project 8 PC',
+    'Project 9': 'Notes Project 9 PC',
+    'Project 10': 'Notes Project 10 PC',
+    'Project 11': 'Notes Project 11 PC',
+    'Project 12': 'Notes Project 12 PC',
+    'Project 13': 'Notes Project 13 PC',
+    'Project 14': 'Notes Project 14 PC',
+    'Project 15': 'Notes Project 15 PC',
+  },
+
+  mse: {
+    'Project 1': 'Notes Project 1 MSE',
+    'Project 2': 'Notes Project 2 MSE',
+    'Project 3': 'Notes Project 3 MSE',
+    'Project 4': 'Notes Project 4 MSE',
+    'Project 5': 'Notes Project 5 MSE',
+    'Project 6': 'Notes Project 6 MSE',
+    'Project 7': 'Notes Project 7 MSE',
+    'Project 8': 'Notes Project 8 MSE',
+    'Project 9': 'Notes Project 9 MSE',
+    'Project 10': 'Notes Project 10 MSE',
+    'Project 11': 'Notes Project 11 MSE',
+    'Project 12': 'Notes Project 12 MSE',
+    'Project 13': 'Notes Project 13 MSE',
+    'Project 14': 'Notes Project 14 MSE',
+    'Project 15': 'Notes Project 15 MSE',
+  },
+
+  tef: {
+    'Project 1': 'Notes Project 1 TEF',
+    'Project 2': 'Notes Project 2 TEF',
+    'Project 3': 'Notes Project 3 TEF',
+    'Project 4': 'Notes Project 4 TEF',
+    'Project 5': 'Notes Project 5 TEF',
+    'Project 6': 'Notes Project 6 TEF',
+    'Project 7': 'Notes Project 7 TEF',
+    'Project 8': 'Notes Project 8 TEF',
+    'Project 9': 'Notes Project 9 TEF',
+    'Project 10': 'Notes Project 10 TEF',
+    'Project 11': 'Notes Project 11 TEF',
+    'Project 12': 'Notes Project 12 TEF',
+    'Project 13': 'Notes Project 13 TEF',
+    'Project 14': 'Notes Project 14 TEF',
+    'Project 15': 'Notes Project 15 TEF',
+  },
+
+  qmm: {
+    'Project 1': 'Notes Project 1 QMM',
+    'Project 2': 'Notes Project 2 QMM',
+    'Project 3': 'Notes Project 3 QMM',
+    'Project 4': 'Notes Project 4 QMM',
+    'Project 5': 'Notes Project 5 QMM',
+    'Project 6': 'Notes Project 6 QMM',
+    'Project 7': 'Notes Project 7 QMM',
+    'Project 8': 'Notes Project 8 QMM',
+    'Project 9': 'Notes Project 9 QMM',
+    'Project 10': 'Notes Project 10 QMM',
+    'Project 11': 'Notes Project 11 QMM',
+    'Project 12': 'Notes Project 12 QMM',
+    'Project 13': 'Notes Project 13 QMM',
+    'Project 14': 'Notes Project 14 QMM',
+    'Project 15': 'Notes Project 15 QMM',
+  },
+
+  qmml: {
+    'Project 1': 'Notes Project 1 QMM-L',
+    'Project 2': 'Notes Project 2 QMM-L',
+    'Project 3': 'Notes Project 3 QMM-L',
+    'Project 4': 'Notes Project 4 QMM-L',
+    'Project 5': 'Notes Project 5 QMM-L',
+    'Project 6': 'Notes Project 6 QMM-L',
+    'Project 7': 'Notes Project 7 QMM-L',
+    'Project 8': 'Notes Project 8 QMM-L',
+    'Project 9': 'Notes Project 9 QMM-L',
+    'Project 10': 'Notes Project 10 QMM-L',
+    'Project 11': 'Notes Project 11 QMM-L',
+    'Project 12': 'Notes Project 12 QMM-L',
+    'Project 13': 'Notes Project 13 QMM-L',
+    'Project 14': 'Notes Project 14 QMM-L',
+    'Project 15': 'Notes Project 15 QMM-L',
+  },
+
+  ctg: {
+    'Project 1': 'Notes Project 1 CTG',
+    'Project 2': 'Notes Project 2 CTG',
+    'Project 3': 'Notes Project 3 CTG',
+    'Project 4': 'Notes Project 4 CTG',
+    'Project 5': 'Notes Project 5 CTG',
+    'Project 6': 'Notes Project 6 CTG',
+    'Project 7': 'Notes Project 7 CTG',
+    'Project 8': 'Notes Project 8 CTG',
+    'Project 9': 'Notes Project 9 CTG',
+    'Project 10': 'Notes Project 10 CTG',
+    'Project 11': 'Notes Project 11 CTG',
+    'Project 12': 'Notes Project 12 CTG',
+    'Project 13': 'Notes Project 13 CTG',
+    'Project 14': 'Notes Project 14 CTG',
+    'Project 15': 'Notes Project 15 CTG',
+  },
+
+  hrl: {
+    'Project 1': 'Notes Project 1 HRL',
+    'Project 2': 'Notes Project 2 HRL',
+    'Project 3': 'Notes Project 3 HRL',
+    'Project 4': 'Notes Project 4 HRL',
+    'Project 5': 'Notes Project 5 HRL',
+    'Project 6': 'Notes Project 6 HRL',
+    'Project 7': 'Notes Project 7 HRL',
+    'Project 8': 'Notes Project 8 HRL',
+    'Project 9': 'Notes Project 9 HRL',
+    'Project 10': 'Notes Project 10 HRL',
+    'Project 11': 'Notes Project 11 HRL',
+    'Project 12': 'Notes Project 12 HRL',
+    'Project 13': 'Notes Project 13 HRL',
+    'Project 14': 'Notes Project 14 HRL',
+    'Project 15': 'Notes Project 15 HRL',
+
+    log: {
+      'Project 1': 'Notes Project 1 LOG',
+      'Project 2': 'Notes Project 2 LOG',
+      'Project 3': 'Notes Project 3 LOG',
+      'Project 4': 'Notes Project 4 LOG',
+      'Project 5': 'Notes Project 5 LOG',
+      'Project 6': 'Notes Project 6 LOG',
+      'Project 7': 'Notes Project 7 LOG',
+      'Project 8': 'Notes Project 8 LOG',
+      'Project 9': 'Notes Project 9 LOG',
+      'Project 10': 'Notes Project 10 LOG',
+      'Project 11': 'Notes Project 11 LOG',
+      'Project 12': 'Notes Project 12 LOG',
+      'Project 13': 'Notes Project 13 LOG',
+      'Project 14': 'Notes Project 14 LOG',
+      'Project 15': 'Notes Project 15 LOG',
+    },
+  
+    fcm: {
+      'Project 1': 'Notes Project 1 FCM',
+      'Project 2': 'Notes Project 2 FCM',
+      'Project 3': 'Notes Project 3 FCM',
+      'Project 4': 'Notes Project 4 FCM',
+      'Project 5': 'Notes Project 5 FCM',
+      'Project 6': 'Notes Project 6 FCM',
+      'Project 7': 'Notes Project 7 FCM',
+      'Project 8': 'Notes Project 8 FCM',
+      'Project 9': 'Notes Project 9 FCM',
+      'Project 10': 'Notes Project 10 FCM',
+      'Project 11': 'Notes Project 11 FCM',
+      'Project 12': 'Notes Project 12 FCM',
+      'Project 13': 'Notes Project 13 FCM',
+      'Project 14': 'Notes Project 14 FCM',
+      'Project 15': 'Notes Project 15 FCM',
+    },
+  },
+}
+
 const departmentCriteria = {
   'pm': ["PS Method", "Presentation Skills"],
   'pc': ["Cost Savings", "Involvement of Associates"],
-  'mse': ["PS Method", "KPI Improvement"],
+  'mse': ["PS Method", "Cost Savings"],
   'tef': ["KPI Improvement", "Presentation Skills"],
   'qmm': ["PS Method", "Involvement of Associates"],
-  'pse': ["PS Method", "Involvement of Associates"],
+  'qmml': ["PS Method", "Involvement of Associates"],
   'ctg': ["KPI Improvement", "Cost Savings"],
   'hrl': ["Presentation Skills", "Involvement of Associates"],
   'log': ["KPI Improvement", "Cost Savings"],
+  'fcm': ["Cost Savings", "Presentation Skills"]
 };
 
 function App() {
@@ -80,7 +265,7 @@ function App() {
   const [progress, setProgress] = useState(0);
   const [selectedDepartment, setSelectedDepartment] = useState('');
   const [selectedProject, setSelectedProject] = useState('');
-  const [notes, setNotes] = useState('');
+  const [notes, setNotes] = useState(initialNotes);
 
 
   // Stare pentru rating-urile pentru fiecare categorie pentru fiecare proiect
@@ -137,51 +322,61 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    const calculateDataForProject = (ratings) => {
-        const psMethodAverage = ( (ratings['category1'] * 0.2) + (ratings['category2'] * 0.2) + (ratings['category3'] * 0.2) + (ratings['category4'] * 0.2) + (ratings['category5'] * 0.2));
-        const kpiImprovementAverage = (ratings["kpi-improvement-category1"] * 0.5 + ratings["kpi-improvement-category2"] * 0.5) / 1;
-        const costSavingsImprovementAverage = (ratings["cost-savings-improvement-category1"] * 0.4 + ratings["cost-savings-improvement-category2"] * 0.3 + ratings["cost-savings-improvement-category3"] * 0.3) / (0.4 + 0.3 + 0.3);
-        const presentationSkillsAverage = (ratings["presentation-skills-category1"] * 0.4 + ratings["presentation-skills-category2"] * 0.3 + ratings["presentation-skills-category3"] * 0.3) / (0.4 + 0.3 + 0.3);
-        const involvementAssociatesAverage = (ratings["involvement-of-associates-category1"] * 0.3 + ratings["involvement-of-associates-category2"] * 0.3 + ratings["involvement-of-associates-category3"] * 0.4) / (0.3 + 0.3 + 0.4);
-
-        return {
-            "PS Method": psMethodAverage,
-            "KPI Improvement": kpiImprovementAverage,
-            "Cost Savings Improvement": costSavingsImprovementAverage,
-            "Presentation Skills": presentationSkillsAverage,
-            "Involvement of Associates from Affected Area": involvementAssociatesAverage,
-            Notes: notes,
-        };
+  
+    // Adăugăm 'projectNumber' ca al doilea parametru aici
+    const calculateDataForProject = (ratings, projectNumber) => {
+      const psMethodAverage = (ratings['category1'] + ratings['category2'] + ratings['category3'] + ratings['category4'] + ratings['category5']);
+      const kpiImprovementAverage = (ratings["kpi-improvement-category1"] + ratings["kpi-improvement-category2"]);
+      const costSavingsImprovementAverage = (ratings["cost-savings-improvement-category1"] + ratings["cost-savings-improvement-category2"] + ratings["cost-savings-improvement-category3"]);
+      const presentationSkillsAverage = (ratings["presentation-skills-category1"] + ratings["presentation-skills-category2"] + ratings["presentation-skills-category3"]);
+      const involvementAssociatesAverage = (ratings["involvement-of-associates-category1"] + ratings["involvement-of-associates-category2"] + ratings["involvement-of-associates-category3"]);
+  
+      // Obținem notele pentru proiectul curent bazat pe 'projectNumber'
+      const projectNotes = notes[selectedDepartment]?.[`Project ${projectNumber}`] || ''; 
+  
+      return {
+        "PS Method": psMethodAverage,
+        "KPI Improvement": kpiImprovementAverage,
+        "Cost Savings Improvement": costSavingsImprovementAverage,
+        "Presentation Skills": presentationSkillsAverage,
+        "Involvement of Associates from Affected Area": involvementAssociatesAverage,
+        Notes: projectNotes,
+      };
     };
-
+  
     const getURLForProject = (sheetId, projectNumber, rowToUpdate) => {
-        return `https://sheet.best/api/sheets/${sheetId}/tabs/Project ${projectNumber}/${rowToUpdate}`;
+      return `https://sheet.best/api/sheets/${sheetId}/tabs/Project ${projectNumber}/${rowToUpdate}`;
     }
-
+  
     const sheetId = "3048251d-1474-4596-8449-f3ea8ead9356";
     const departmentIndex = departments.findIndex(dept => dept.id === selectedDepartment);
     const rowToUpdate = departmentIndex !== -1 ? departmentIndex : 0;
-
+  
     const promises = [];
   
     for(let i = 1; i <= 15; i++) {
-        const currentProjectRatings = projectRatings[`Project ${i}`];
-        if(!currentProjectRatings) {
-            console.warn(`Nu există ratinguri pentru Proiectul ${i}`);
-            continue;
-        }
-
-        const data = calculateDataForProject(currentProjectRatings);
-        const url = getURLForProject(sheetId, i, rowToUpdate);
-        promises.push(axios.patch(url, data));
+      const currentProjectRatings = projectRatings[`Project ${i}`];
+      if(!currentProjectRatings) {
+        console.warn(`Nu există ratinguri pentru Proiectul ${i}`);
+        continue;
+      }
+  
+      // Pasăm 'i' ca 'projectNumber' către 'calculateDataForProject'
+      const data = calculateDataForProject(currentProjectRatings, i);
+      const url = getURLForProject(sheetId, i, rowToUpdate);
+      promises.push(axios.patch(url, data));
     }
-
+  
     Promise.all(promises)
-        .then(responses => {
-            console.log('Toate datele au fost trimise cu succes');
-            setNotes('');
-            setLoading(false);
-            setProgress(0);
+      .then(responses => {
+        console.log('Toate datele au fost trimise cu succes');
+        setNotes('');
+        setLoading(false);
+        setProgress(0);
+        // Afișați un mesaj către utilizator pentru succes
+        alert('Data was succesfully send! Thank you!');
+        // Aici trebuie să resetați rating-urile pentru toate proiectele
+        // Adaugă codul necesar pentru resetare aici, dacă este necesar
             // Afișați un mesaj către utilizator pentru succes
             alert('Data was succesfully send!Thank you!');
             // Resetați și rating-urile pentru toate proiectele
@@ -212,6 +407,7 @@ function App() {
             setProgress(0); //Resetati progresul la 0
         });
 }
+
 
 const resetRatings = () => {
     return {
@@ -258,21 +454,6 @@ const renderRatings = (project, category, maxRating) => {
     </div>
   );
 };
-
-
-// const isFormValid = (selectedDepartment, projectRatings, selectedProject) => {
-//   const criteria = departmentCriteria[selectedDepartment];
-//   if (!criteria) {
-//     throw new Error(`No criteria found for department: ${selectedDepartment}`);
-//   }
-//   for (const criterion of criteria) {
-//     if (!projectRatings[selectedProject]?.[criterion]) {
-//       return false; // If there's no rating for a criterion, return false
-//     }
-//   }
-//   return true; // If all criteria have ratings, return true
-// };
-
 
 const criteriaToSubcategories = useMemo(() => ({
   "PS Method": ['category1', 'category2', 'category3', 'category4', 'category5'],
@@ -363,15 +544,34 @@ useEffect(() => {
           <div className="form-row">
             <label>Team Leader:</label>
             <label>{defineProjectLeader[selectedProject]}</label>
-          </div>
+            <div>
             <label>Notes:</label>
-            <textarea className="note-size"
-              value={notes}
-              onChange={(e) => setNotes(e.target.value)}
-              placeholder="Add your notes here..."
-            />
+            <div>
+    <textarea
+      id="notes"
+      className="note-size"
+      value={notes[selectedDepartment]?.[selectedProject] || ''}
+      onChange={(e) => {
+        const updatedNotes = { ...notes };
+        if (!updatedNotes[selectedDepartment]) {
+          updatedNotes[selectedDepartment] = {};
+        }
+        updatedNotes[selectedDepartment][selectedProject] = e.target.value;
+        setNotes(updatedNotes);
+      }}
+      placeholder="Add your notes here..."
+    /><br />
+  </div></div></div>
+      <div>
           <label><i>*Please select a mark for each project from below</i></label>
-
+          <br />
+          <br />
+          <label>Projects with marks between 1 and 5: 1 Very Poor and 5 Very Good</label>
+          <br />
+          <br />
+          <label>Projects with marks between 1 and 3: 1 Very Poor and 3 Very Good</label>
+    
+          </div>
           {selectedDepartment && departmentCriteria[selectedDepartment].includes("PS Method") && (
           <div className="form-row score-section">
             <div>
