@@ -374,13 +374,9 @@ function App() {
         setLoading(false);
         setProgress(0);
         // Afișați un mesaj către utilizator pentru succes
-        alert('Data was succesfully send! Thank you!');
-        // Aici trebuie să resetați rating-urile pentru toate proiectele
-        // Adaugă codul necesar pentru resetare aici, dacă este necesar
-            // Afișați un mesaj către utilizator pentru succes
             alert('Data was succesfully send!Thank you!');
             // Resetați și rating-urile pentru toate proiectele
-            
+
             setProjectRatings({
                 'Project 1': resetRatings(),
                 'Project 2': resetRatings(),
