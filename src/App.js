@@ -380,6 +380,7 @@ function App() {
             // Afișați un mesaj către utilizator pentru succes
             alert('Data was succesfully send!Thank you!');
             // Resetați și rating-urile pentru toate proiectele
+            
             setProjectRatings({
                 'Project 1': resetRatings(),
                 'Project 2': resetRatings(),
