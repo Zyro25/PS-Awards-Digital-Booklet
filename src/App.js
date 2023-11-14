@@ -343,12 +343,12 @@ function App() {
         Notes: projectNotes,
       };
     };
-  
+
     const getURLForProject = (sheetId, projectNumber, rowToUpdate) => {
       return `https://sheet.best/api/sheets/${sheetId}/tabs/Project ${projectNumber}/${rowToUpdate}`;
     }
   
-    const sheetId = "3048251d-1474-4596-8449-f3ea8ead9356";
+    const sheetId = "fbc3fd8-0afd-4a5b-a2e9-7abc715ba428";
     const departmentIndex = departments.findIndex(dept => dept.id === selectedDepartment);
     const rowToUpdate = departmentIndex !== -1 ? departmentIndex : 0;
   
@@ -495,6 +495,7 @@ useEffect(() => {
     <div className="App">
       {/* Afișați fereastra de încărcare și progresul doar atunci când "loading" este true */}
     {loading && (
+      
       <div className="loader-container">
         <div className="loader"></div>
         <div className="progress">{progress}%</div>
